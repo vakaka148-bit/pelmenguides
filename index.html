@@ -49,15 +49,15 @@
     <form>
         <label for="name">
             <span id="nameMessage"></span>
-            <input id="formName" type="text" placeholder="Ваше имя которое вам дали при вашем рождении"
+            <input id="formName" type="text" onchange="changeName(this.value)" placeholder="Ваше имя которое вам дали при вашем рождении">
         </label>
         <label for="formGame">
             <span id="gameMessage"></span>
-            <input id="formGame" type="text" placeholder="Игра для которой вам нужен гайд"
+            <input id="formGame" type="text" placeholder="Игра для которой вам нужен гайд">
         </label>
         <label for="formAgreement">
             <span id="agreementMessage"></span>
-            <input id ="formAgreement" type="checkbox" checked>
+            <input id ="formAgreement" type="checkbox">
                 Я согласен с условиями предоставления услуг
         </label>
         <button id="formButton">Отправить</button>
@@ -84,7 +84,9 @@
             </div>
         </div>
     </div>
-
 </body>
+<footer>
+    <h4>© 2096год Гайд Пельменя. Все права защищены.</h4>
+</footer>
 </html>
 

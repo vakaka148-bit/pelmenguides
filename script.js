@@ -1,28 +1,34 @@
 'use strict'
 
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
+let currentSlide = 0
+const slides = document.querySelectorAll('.slide')
+const totalSlides = slides.length
+let userName
+let smeshnyedlynnietochnonormalnyestrokasymbolovkotoryasostoitizmnozhestvosymbolovyadymaynadoprekratytetopisattakkaketoyzheochendlynnoenazvanyenyvsempoka = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?1234567890]/
 
 function showSlide(n) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    slides[n].classList.add('active');
+    slides.forEach(slide => slide.classList.remove('active'))
+    slides[n].classList.add('active')
 }
 
 function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    showSlide(currentSlide);
+    currentSlide = (currentSlide + 1) % totalSlides
+    showSlide(currentSlide)
 }
 
 function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    showSlide(currentSlide);
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides
+    showSlide(currentSlide)
 }
 
-setInterval(nextSlide, 5000);
+function changeName(name) {
+    userName = name
+}
 
-document.querySelector('.prev').addEventListener('click', prevSlide);
-document.querySelector('.next').addEventListener('click', nextSlide);
+setInterval(nextSlide, 5000)
+
+document.querySelector('.prev').addEventListener('click', prevSlide)
+document.querySelector('.next').addEventListener('click', nextSlide)
 
 const minuteMilliseconds = 1000 * 60
 const hourMilliseconds = minuteMilliseconds * 60
@@ -59,3 +65,17 @@ function formatTo00(number) {
 
 updateSaleDate()
 setInterval(updateSaleDate, 1000)
+
+document.getElementById('formButton').addEventListener('click', function() {
+    const name = document.getElementById('formName').value
+    const game = document.getElementById('formGame').value
+    const agree = document.getElementById('formAgreement').checked
+
+    if (name.length < 2) return alert('Имя должно быть больше 2 символов')
+    if (smeshnyedlynnietochnonormalnyestrokasymbolovkotoryasostoitizmnozhestvosymbolovyadymaynadoprekratytetopisattakkaketoyzheochendlynnoenazvanyenyvsempoka.test(name)) return alert('Нет цифр и спец-символов')
+    if (game.length < 2) return alert('Введите игру')
+    if (!agree) return alert('Согласитесь с условиями')
+
+    alert('Спасибо, ' + name + '! Гайд для ' + game + ' готов!')
+    document.querySelector('form').reset()
+})
