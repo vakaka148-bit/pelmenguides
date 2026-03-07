@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+.BestText {
+    color: rgb(221, 97, 97);
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    background-image: url(./pictures/another-wallpaper-for-site.jpg);
+}
+
+.BestImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 4%;
+    padding: 10px;
+}
+
+body {
+    background-image: url(./pictures/wallpaper-for-site.jpg);
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+#slider {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#slider:hover {
+    box-shadow: 0px 8px 10px 2px black
+}
+
+
+.slide {
+    display: none;
+    width: 100%;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 2.5rem;
+    color:aliceblue
+}
+
+.slide.active {
+    display: block;
+    animation: fadeIn 0.67s;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 2.5rem;
+    color:aliceblue
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.sale-timer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-image: url(./pictures/eshe-skidki.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+
+.sale-header {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.timer {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.timer-item {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    padding: 10px 8px;
+    min-width: 50px;
+    border: 1px solid #ddd;
+}
+
+.timer-item span {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    display: block;
+    font-family: 'Rubik', sans-serif;
+}
+
+.timer-item p {
+    margin: 5px 0 0 0;
+    color: #eee6e6;
+    font-size: 0.75rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+}
+
+h2 {
+    font-family: 'Rubik', sans-serif;
+    color: #666;
+    font-size: 2rem;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    margin: auto;
+    font-size: 1.2rem;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+form input::placeholder {
+    text-align: center;
+}
+
+form {
+    font-family: 'Rubik', sans-serif;
+}
+
+label{
+    text-align: center;
+}

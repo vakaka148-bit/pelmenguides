@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гайд Пельменя</title>
+    <link rel="icon" href="./pictures/pelmen-removebg-preview.png" type="image/png">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+    
+    <header><h1 class="BestText">Лучший Сайт Для Персональных Гайдов</h1>
+        <nav>
+            <a href="#us">Наша команда</a>
+            <a href="#howwework">Как мы работаем</a>
+            <a href="#form">Форма для покупки</a>
+        </nav>
+    </header>
+    <main>
+        <section id="us">
+            <h2>Наша команда</h2>
+                <div id="slider">
+                    <div class="slide active">
+                        <img src="./pictures/pelmen-removebg-preview.png" alt="Пельмень">
+                        <span>Это я, Лучший гайдер на этом свете</span>
+                    </div>
+                    <div class="slide">
+                        <img src="./pictures/eito-mi.jpg" alt="Наша команда">
+                        <span>Наша команда, которая делает для вас лучшие гайды</span>
+                    </div>
+                    <div class="slide">
+                        <img src="./pictures/skidki-na-pelmeni.jpg" alt="Скидки На Гайды">
+                        <span>Скидки на гайды, которые мы делаем для вас</span>
+                    </div>
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
+                </div>
+                    </section>
+        <section id="howwework">
+            <h2>Как мы работаем</h2>
+                <p>Мы делаем гайды для вас, чтобы вы могли стать лучшими в своих играх. Мы работаем быстро и качественно, чтобы вы могли получить свой гайд в кратчайшие сроки. Мы всегда готовы помочь вам с любыми вопросами, которые у вас могут возникнуть.</p>
+        </section>
+        <section id="form">
+            <h2>Форма для заполнения</h2>
+        </section>
+    </main>
+    <form>
+        <label for="name">
+            <span id="nameMessage"></span>
+            <input id="formName" type="text" placeholder="Ваше имя которое вам дали при вашем рождении"
+        </label>
+        <label for="formGame">
+            <span id="gameMessage"></span>
+            <input id="formGame" type="text" placeholder="Игра для которой вам нужен гайд"
+        </label>
+        <label for="formAgreement">
+            <span id="agreementMessage"></span>
+            <input id ="formAgreement" type="checkbox" checked>
+                Я согласен с условиями предоставления услуг
+        </label>
+        <button id="formButton">Отправить</button>
+    </form>
+    <img class="BestImage" src="./pictures/pelmen-removebg-preview.png" alt="Пельмень">
+    <div class="sale-timer">
+        <div class="sale-header">СКИДКА НА ГАЙД</div>
+        <div class="timer">
+            <div class="timer-item">
+                <span id="saleDays">0</span>
+                <p>дней</p>
+            </div>
+            <div class="timer-item">
+                <span id="saleHours">0</span>
+                <p>часов</p>
+            </div>
+            <div class="timer-item">
+                <span id="saleMinutes">00</span>
+                <p>минут</p>
+            </div>
+            <div class="timer-item">
+                <span id="saleSeconds">00</span>
+                <p>секунд</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
