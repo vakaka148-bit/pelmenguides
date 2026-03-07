@@ -246,7 +246,7 @@ form button:hover {
     background-color: rgb(200, 70, 70);
 }
 
-form .formName {
+form.formName {
     font-family: 'Rubik', sans-serif;
     color: #fff;
     font-size: 1.2rem;
@@ -256,4 +256,5 @@ form .formName {
 
 html {
     scroll-behavior: smooth;
+
 }
